@@ -15,43 +15,43 @@
     <header class="header">
         <a href="#" class="logo"><span>Oleksandr Sysov</span></a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <ul class="nav-links">
+        <ul class="nav-links" data-lang="en">
             <li>
-                <a href="#about">About</a>
+                <a href="#about" id="nav-about">About</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" id="nav-experience">Experience</a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" id="nav-projects">Projects</a>
             </li>
             <a href="https://codeberg.org/qch1ll" target="_blank" title="Go to my github">
-                <button class="visit-btn">Visit Github</button>
+                <button class="visit-btn" id="github-btn">Visit Github</button>
             </a>
-            
         </ul>
+        <i class="fa-solid fa-globe" id="language-icon"></i>
     </header>
 
-    <section id="about" class="about">
+    <section id="about" class="about" data-lang="en">
         <div class="about-container">
             <img src="image.jpg" alt="">
             <div class="info-box">
                 <div class="text">
-                    <h3>Hi, i'm</h3>
+                    <h3 id="about-hi">Hi, i'm</h3>
                     <h1>Oleksandr Sysov</h1>
-                    <span>Game Developer</span>
+                    <span id="about-role">Game Developer</span>
                 </div>
                 <div class="about-description">
-                    <p>
+                    <p id="about-description">
                         An aspiring IT specialist eager for career growth and practical experience. Quick to learn new tools, approach tasks responsibly, and work well in a team. I am motivated to grow in a professional environment, learn from experienced colleagues, and contribute to the company.
                     </p>
                 </div>
                 <div class="btn-group">
                     <a href="./MY CV latest.pdf" target="_blank">
-                        <div class="btn">Download CV</div>
+                        <div class="btn" id="cv-btn">Download CV</div>
                     </a>
                     <a href="mailto:aleksandrsysov42@gmail.com" target="_blank">
-                        <div class="btn">Contact</div>
+                        <div class="btn" id="contact-btn">Contact</div>
                     </a>
                 </div>
                 <div class="socials">
@@ -66,18 +66,18 @@
         </div>
     </section>
 
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experience</h2>
+    <section id="experience" class="experience" data-lang="en">
+        <h2 class="section-title" id="experience-title">Experience</h2>
         <div class="experience-info">
             <div class="grid">
                 <div class="grid-card">
-                    <span>IT Technician</span>
+                    <span id="exp1-title">IT Technician</span>
                     <i class="fa-solid fa-laptop"></i>
-                    <h3>4 Years</h3>
-                    <p>Placeholder text. I probably should put a description of what i did there.</p>
+                    <h3 id="exp1-years">4 Years</h3>
+                    <p id="exp1-description">Placeholder text. I probably should put a description of what i did there.</p>
                 </div>
                 <div class="grid-card">
-                    <span>To Be Continued...</span>
+                    <span id="exp2-title">To Be Continued...</span>
                     <h3></h3>
                     <p></p>
                 </div>
@@ -85,21 +85,21 @@
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Recent Projects</h2>
+    <section id="projects" class="projects" data-lang="en">
+        <h2 class="section-title" id="projects-title">Recent Projects</h2>
         <div class="projects-grid">
             <div class="projects-card">
                 <img src="project1.png" alt="">
                 <h3>Project 1</h3>
-                <p>Project Description. This is placeholder text.</p>
+                <p id="project1-description">Project Description. This is placeholder text.</p>
                 <div class="btn-group">
-                    <div class="btn">Github Repo</div>
+                    <div class="btn" class="btn" id="project-btn">Github Repo</div>
                 </div>
             </div>
             <div class="projects-card">
                 <img src="project1.png" alt="">
                 <h3>Project 2</h3>
-                <p>Project Description. This is placeholder text.</p>
+                <p id="project2-description">Project Description. This is placeholder text.</p>
                 <div class="btn-group">
                     <div class="btn">Github Repo</div>
                 </div>
@@ -110,16 +110,16 @@
     <footer>
         <ul>
             <li>
-                <a href="#about">About</a>
+                <a href="#about" id="nav-aboutf">About</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" id="nav-experiencef">Experience</a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" id="nav-projectsf">Projects</a>
             </li>
         </ul>
-        <p class="copyright">© All Rights Reserved | Oleksandr Sysov</p>
+        <p class="copyright" id="copyright">© All Rights Reserved | Oleksandr Sysov</p>
     </footer>
     <script src="script.js"></script>
 </body>

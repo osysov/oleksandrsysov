@@ -50,6 +50,7 @@ header{
     display: flex;
     align-items: center;
     gap: 2rem;
+    text-wrap: nowrap;
 }
 
 li a{
@@ -97,6 +98,9 @@ li a:hover::before{
     display: none;
 }
 
+#language-icon{
+    font-size: 1.3rem;
+}
 section{
     min-height: 100vh;
     padding: 8rem 12%;
@@ -362,6 +366,17 @@ footer ul li a{
     margin-top: 2rem;
 }
 
+#language-icon{
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#language-icon:hover{
+    transform: scale(1.15);
+    color: #B4D4EE;
+}
+
 @media(max-width:1280px){
     header{
         padding: 1rem 2rem;
@@ -373,23 +388,16 @@ footer ul li a{
     .experience-info{
         flex-direction: column;
     }
-    .input-box input{
-        padding: 1rem 5rem;
-        font-size: 1.5rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-    .input-box i{
-        font-size: 1.5rem;
-    }
 }
 @media(max-width:768px){
     header{
-        padding: 1rem 1rem;
+        padding: 1rem 1.5rem;
         gap: 1rem;
     }
     header .logo{
+        font-size: 1rem;
+    }
+    header #language-icon{
         font-size: 1rem;
     }
     header .visit-btn{
@@ -397,16 +405,6 @@ footer ul li a{
     }
     .about-container{
         flex-direction: column;
-    }
-    .input-box input{
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1rem;
-    }
-    .input-box i{
-        display: none;
     }
     .grid{
         grid-template-columns: repeat(1, 1fr);
@@ -441,22 +439,17 @@ footer ul li a{
         display: block;
     }
     header{
-        padding: 1rem 5rem;
-        gap: 8rem;
+        padding: 1rem 3rem;
+        gap: 2rem;
     }
     header .logo{
         font-size: 1.5rem;
     }
+    header #language-icon{
+        font-size: 1.5rem;
+    }
     .about-container img{
         width: 80vw;
-    }
-    .input-box input{
-        padding: 0.3rem 3rem;
-        width: 80%;
-        font-size: 1.2rem;
-    }
-    .input-box input::placeholder{
-        font-size: 1.2rem;
     }
     footer ul{
         gap: 1rem;
