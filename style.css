@@ -162,6 +162,18 @@ section{
     gap: 1rem;
 }
 
+.btn-disabled{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid rgb(110, 110, 110);
+    color: rgb(110, 110, 110);
+    background-color: rgb(220, 220, 220);
+    cursor:not-allowed;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out
+}
+
 .btn{
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
@@ -176,6 +188,21 @@ section{
 .btn:hover{
     background-color: black;
     color: white;
+}
+
+#cv-btn-en{
+    display: flex;
+}
+
+#cv-btn-fr{
+    display: none;
+}
+#cv-btn-en.disabled{
+    display: none;
+}
+
+#cv-btn-fr.active{
+    display: flex;
 }
 
 .socials{
@@ -196,7 +223,7 @@ section{
 
 .section-title{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 3rem;
 }
@@ -222,7 +249,6 @@ section{
     flex-direction: column;
     align-items: baseline;
     justify-content: left;
-    cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
@@ -270,10 +296,10 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
+    text-wrap-style: balance;
     gap: 1.5rem;
     border: 2px solid black;
     border-radius: 3rem;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
@@ -286,6 +312,12 @@ section{
 .projects-card img{
     width: 20vw;
     border-radius: 1rem;
+}
+
+.projects-card:hover .btn-disabled{
+    border: 2px solid rgb(220, 220, 220);
+    background-color: rgb(110, 110, 110);
+    color: rgb(220, 220, 220);
 }
 
 .projects-card:hover .btn{
@@ -302,40 +334,6 @@ section{
 .projects-card h3{
     font-size: 2rem;
     font-weight: 500;
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 5rem;
-}
-
-.input-box input{ 
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 1.5rem 8rem;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.input-box input::placeholder{
-    font-size: 2rem;
-}
-
-.input{
-    position: relative;
-}
-
-.input i{
-    position: absolute;
-    font-size: 3rem;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%, -50%);
 }
 
 footer{
@@ -439,7 +437,7 @@ footer ul li a{
         display: block;
     }
     header{
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         gap: 2rem;
     }
     header .logo{
@@ -450,6 +448,9 @@ footer ul li a{
     }
     .about-container img{
         width: 80vw;
+    }
+    .section-title{
+        font-size: 2.5rem;
     }
     footer ul{
         gap: 1rem;

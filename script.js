@@ -8,6 +8,8 @@ menuIcon.onclick = () => {
 const languageIcon = document.querySelector("#language-icon");
 
 let currentLanguage = "en";
+const downloadEN = document.querySelector("#cv-btn-en")
+const downloadFR = document.querySelector("#cv-btn-fr")
 
 const translations = {
     en: {
@@ -22,22 +24,28 @@ const translations = {
         "about-description":
             "An aspiring IT specialist eager for career growth and practical experience. Quick to learn new tools, approach tasks responsibly, and work well in a team. I am motivated to grow in a professional environment, learn from experienced colleagues, and contribute to the company.",
 
-        "cv-btn": "Download CV",
+        "cv-btn-en": "Download CV",
         "contact-btn": "Contact",
 
         "experience-title": "Experience",
 
         "exp1-title": "IT Technician",
         "exp1-years": "4 Years",
-        "exp1-description":
-            "Placeholder text. I probably should put a description of what I did there.",
+        "exp1-description-1":
+            "- Testing and functional verification of laptops and desktop computers prior to sale.",
+        "exp1-description-2":
+            "- Preparation of products for sale (installation, configuration, quality control)",
+        "exp1-description-3":
+            "- Fault diagnosis and management of defective devices, with referral to the maintenance team or repair where possible.",
+        "exp1-description-4":
+            "- Product photography to showcase items, online listings, and store communications.",
 
         "exp2-title": "To Be Continued...",
 
-        "projects-title": "Recent Projects",
+        "projects-title": "Projects",
 
         "project1-description":
-            "Project Description. This is placeholder text.",
+            "The first game I've ever made. It was one of the projects for game development courses I attended when I was at school. A simple game about stacking square and round objects on top of each other. Unfortunately, its source code has been lost to time.",
         "project2-description":
             "Project Description. This is placeholder text.",
         "project-btn": "Github Repo",
@@ -61,19 +69,25 @@ const translations = {
         "about-description":
             "Spécialiste informatique en devenir, motivé à acquérir de l'expérience pratique et à évoluer professionnellement. J'apprends rapidement de nouveaux outils, j'aborde les tâches avec sérieux et j'apprécie le travail en équipe. Je souhaite évoluer dans un environnement professionnel, apprendre auprès de collègues expérimentés et contribuer au succès de l'entreprise.",
 
-        "cv-btn": "Télécharger le CV",
+        "cv-btn-fr": "Télécharger le CV",
         "contact-btn": "Contact",
 
         "experience-title": "Expérience",
 
         "exp1-title": "Technicien informatique",
         "exp1-years": "4 ans",
-        "exp1-description":
-            "Texte provisoire. Je devrais probablement décrire ce que j'ai réalisé à ce poste.",
+        "exp1-description-1":
+            "- Test et vérification du bon fonctionnement des ordinateurs portables et fixes avant leur mise en vente.",
+        "exp1-description-2":
+            "- Préparation des produits destinés à la vente : installation, configuration et contrôle qualité.",
+        "exp1-description-3":
+            "- Diagnostic des pannes et gestion des appareils défectueux, avec transmission à l’équipe de maintenance ou réparation lorsque cela est possible.",
+        "exp1-description-4":
+            "- Prise de photos des produits pour valoriser les articles, créer des annonces en ligne et contribuer à la communication du magasin.",
 
         "exp2-title": "À suivre...",
 
-        "projects-title": "Projets récents",
+        "projects-title": "Projets",
 
         "project1-description":
             "Description du projet. Ceci est un texte temporaire.",
@@ -105,7 +119,14 @@ function setLanguage(lang) {
 
 languageIcon.addEventListener("click", () => {
     setLanguage(currentLanguage === "en" ? "fr" : "en");
+    downloadEN.classList.toggle("disabled");
+    downloadFR.classList.toggle("active");
 });
 
 const savedLanguage = localStorage.getItem("language") || "en";
 setLanguage(savedLanguage);
+
+if (savedLanguage == "fr") {
+    downloadEN.classList.toggle("disabled");
+    downloadFR.classList.toggle("active");
+}
