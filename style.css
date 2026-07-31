@@ -365,7 +365,7 @@ footer ul li a{
 }
 
 #language-icon{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: .2s;
 }
@@ -393,9 +393,6 @@ footer ul li a{
         gap: 1rem;
     }
     header .logo{
-        font-size: 1rem;
-    }
-    header #language-icon{
         font-size: 1rem;
     }
     header .visit-btn{
@@ -437,11 +434,11 @@ footer ul li a{
         display: block;
     }
     header{
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
         gap: 2rem;
     }
     header .logo{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     header #language-icon{
         font-size: 1.5rem;
